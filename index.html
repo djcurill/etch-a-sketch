@@ -9,8 +9,27 @@
 <body>
     <h1>Etch-a-Sketch</h1>
     <div class="container">
-        
+
     </div>
 </body>
+<script>
+    const n = 30;
+    let container = document.getElementsByClassName("container")[0];
+    container.style.gridTemplateColumns = "repeat(n,1fr)";
+
+    function createGrid(n){
+        container.innerHTML = "";
+        container.style.gridTemplateColumns = `repeat(${n},1fr)`;
+        container.style.gridTemplateRows    = `repeat(${n},1fr)`;
+    }
+
+    function  createCell(col, row){
+        let cell = document.createElement("div");
+        cell.classList.add("cell");
+        cell.style.gridColumn = `${col}`;
+        cell.style.gridRow = `${row}`;
+        return cell
+    }
+</script>
 
 </html>
