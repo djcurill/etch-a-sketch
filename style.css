@@ -1,10 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin+Sketch&display=swap');
+
+body {
+    font-family:'Cabin Sketch';
+}
+
 h1 {
     text-align: center;
 }
 
 .container{
     display: grid;
-    margin: auto;
+    margin: 10px auto;
     width: 30rem;
     height: 30rem;
     border: 1px solid black;
@@ -13,22 +19,48 @@ h1 {
 .cell{
     display: grid;
     border: 0.5px solid black;
-    opacity: 0;
 }
 
 .controls{
     display: grid;
-    grid-template-columns: 1.5fr 3fr;
+    grid-template-columns: 90px 3fr;
     margin: auto;
     width: 30rem;
-    border: 1px solid black;
-    border-bottom-color: transparent;
-    height: 30px;
-    border-top-right-radius: 5px;
-    border-top-left-radius: 5px;
+    height: 50px;
     align-items: center;
+    margin-bottom: 10px;
+}
+
+.label{
+    margin: 0px auto 10px auto;
+    height: 15px;
+    text-align: center;
 }
 
 .slidebar{
-    width: 80%;
+    display: grid;
+    margin: 0 auto;
+    -webkit-appearance: none;
+    width: 90%;
+    height: 10px;
+    background-color: grey;
+    opacity: 0.6;
+    outline: none;
+    border-radius: 5px;
 }
+
+.slidebar::-moz-range-thumb {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #4CAF50;
+    cursor: pointer;
+    outline: none;
+  }
+
+#clear-button{
+    font-family: "Cabin Sketch";
+    align-self: end;
+    justify-self: end;
+    margin-bottom: 5px;
+  }
