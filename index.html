@@ -32,10 +32,13 @@
     }
 
     function removeChildren() {
-        const gridArray = Array.from(container.childNodes);
-        gridArray.forEach((element) => {
-            container.removeChild(element);
-        });
+        while (container.firstChild){
+            container.removeChild(container.lastChild);
+        }
+        // const gridArray = Array.from(container.childNodes);
+        // gridArray.forEach((element) => {
+        //     container.removeChild(element);
+        // });
     }
 
 
@@ -53,11 +56,9 @@
     }
 
     function createGrid(){
-        console.log(n);
         removeChildren(container);
         container.style.gridTemplateColumns = `repeat(${n},1fr)`;
         container.style.gridTemplateRows    = `repeat(${n},1fr)`;
-        console.log(container.style.gridTemplateColumns);
         populateGrid();
     }
 
@@ -67,10 +68,8 @@
     clearButton.addEventListener("click",createGrid);
     slideBar.addEventListener("change",(e) => {
         n = event.target.value;
-        console.log(n);
         createGrid();
     })
-
     createGrid(); 
 </script>
 
