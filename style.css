@@ -6,6 +6,7 @@ body {
 
 h1 {
     text-align: center;
+    font-size: 3rem;
 }
 
 .container{
@@ -31,15 +32,15 @@ h1 {
 }
 
 .label{
-    margin: 0px auto 10px auto;
+    margin: 0px auto 14px auto;
     height: 15px;
     text-align: center;
+    font-size: 20px;
 }
 
 .slidebar{
     display: grid;
-    margin: 0 auto;
-    -webkit-appearance: none;
+    margin: 0 auto 15px auto;
     width: 90%;
     height: 10px;
     background-color: grey;
@@ -56,19 +57,6 @@ h1 {
     cursor: pointer;
     outline: none;
   }
-
-/* #clear-button{
-    font-family: "Cabin Sketch";
-    background-color: #0433BF;
-    color: #F25CA2;
-    letter-spacing: 0.2em;
-    align-self: end;
-    justify-self: end;
-    margin-bottom: 0px;
-    border: none;
-    height: 30px;
-    width: 80px;
-  } */
 
 #clear-button {
     font-family: "Cabin Sketch";
