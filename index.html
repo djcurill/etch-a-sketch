@@ -16,11 +16,18 @@
     const n = 30;
     let container = document.getElementsByClassName("container")[0];
 
+    function fillCell(event){
+        let currentOpacity = Number(event.target.style.opacity);
+        event.target.style.opacity = Math.min(currentOpacity + 0.25,1.0);
+    }
+
     function  createCell(col, row){
         let cell = document.createElement("div");
         cell.classList.add("cell");
         cell.style.gridColumn = `${col}`;
         cell.style.gridRow = `${row}`;
+        cell.style.backgroundColor = "blue";
+        cell.addEventListener("mouseover",fillCell);
         return cell
     }
 
