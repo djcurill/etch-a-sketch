@@ -17,7 +17,6 @@ h1 {
 }
 
 .cell{
-    display: grid;
     border: 0.5px solid black;
 }
 
