@@ -8,13 +8,18 @@
 </head>
 <body>
     <h1>Etch-a-Sketch</h1>
+    <div class="controls">
+        <button>Clear</button>
+        <div class="slidecontainer">
+            <input type="range" min="2" max="30" value="15" class="slidebar">
+        </div>
+    </div>
     <div class="container">
-
     </div>
 </body>
 <script>
     const n = 30;
-    const COLORS = ["#C004D9","#AB05F2","#5A13F2","#2745F2","#138AF2"];
+    const COLORS = ["#AB05F2","#5A13F2","#2745F2","#138AF2"];
     let container = document.getElementsByClassName("container")[0];
 
     function choose(arr){
@@ -31,7 +36,7 @@
         cell.classList.add("cell");
         cell.style.gridColumn = `${col}`;
         cell.style.gridRow = `${row}`;
-        cell.style.backgroundColor = "blue";
+        cell.style.backgroundColor = choose(COLORS);
         cell.addEventListener("mouseover",fillCell);
         return cell
     }
