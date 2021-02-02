@@ -19,10 +19,12 @@
     </div>
 </body>
 <script>
-    let n = 30;
     const COLORS = ["#AB05F2","#5A13F2","#2745F2","#138AF2"];
+    let n = 30;
+    let container = document.getElementsByClassName("container")[0];
+    let clearButton = document.getElementById("clear-button");
+    let slideBar = document.querySelector("input.slidebar");
     
-
     function choose(arr){
         return arr[Math.floor(Math.random() * arr.length)]
     }
@@ -31,16 +33,11 @@
         event.target.style.backgroundColor = choose(COLORS);
     }
 
-    function removeChildren() {
+    function clearGrid() {
         while (container.firstChild){
             container.removeChild(container.lastChild);
         }
-        // const gridArray = Array.from(container.childNodes);
-        // gridArray.forEach((element) => {
-        //     container.removeChild(element);
-        // });
     }
-
 
     function  createCell(){
         let cell = document.createElement("div");
@@ -50,21 +47,18 @@
     }
 
     function populateGrid(){
-        for (let i =0; i < n * n; i ++){
+        for (let i = 0; i < n * n; i ++){
             container.appendChild(createCell());
         }
     }
 
     function createGrid(){
-        removeChildren(container);
+        clearGrid(container);
         container.style.gridTemplateColumns = `repeat(${n},1fr)`;
         container.style.gridTemplateRows    = `repeat(${n},1fr)`;
         populateGrid();
     }
 
-    let container = document.getElementsByClassName("container")[0];
-    let clearButton = document.getElementById("clear-button");
-    let slideBar = document.querySelector("input.slidebar");
     clearButton.addEventListener("click",createGrid);
     slideBar.addEventListener("change",(e) => {
         n = event.target.value;
