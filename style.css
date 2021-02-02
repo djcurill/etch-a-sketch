@@ -57,9 +57,37 @@ h1 {
     outline: none;
   }
 
-#clear-button{
+/* #clear-button{
     font-family: "Cabin Sketch";
+    background-color: #0433BF;
+    color: #F25CA2;
+    letter-spacing: 0.2em;
     align-self: end;
     justify-self: end;
-    margin-bottom: 5px;
+    margin-bottom: 0px;
+    border: none;
+    height: 30px;
+    width: 80px;
+  } */
+
+#clear-button {
+    font-family: "Cabin Sketch";
+    font-size: 0.8rem;
+    font-weight: bold;
+    height: 30px;
+    width: 100%;
+    padding: 1.5em auto;    
+    margin: 1em auto;
+    background-color: lightgrey;
+    border: none;
+    border-radius: 3px;
+    text-transform: uppercase;
+    letter-spacing: 0.2em;
   }
+
+#clear-button:hover{
+    background-color: #6cb3f2;
+  }
+#clear-button:active{
+    box-shadow: inset 0px 0px 10px rgb(86, 4, 121);
+}

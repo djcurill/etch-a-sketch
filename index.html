@@ -20,10 +20,10 @@
 </body>
 <script>
     const COLORS = ["#AB05F2","#5A13F2","#2745F2","#138AF2"];
-    let n = 30;
     let container = document.getElementsByClassName("container")[0];
     let clearButton = document.getElementById("clear-button");
     let slideBar = document.querySelector("input.slidebar");
+    let n = slideBar.value;
     
     function choose(arr){
         return arr[Math.floor(Math.random() * arr.length)]
