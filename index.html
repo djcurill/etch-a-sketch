@@ -14,7 +14,12 @@
 </body>
 <script>
     const n = 30;
+    const COLORS = ["#C004D9","#AB05F2","#5A13F2","#2745F2","#138AF2"];
     let container = document.getElementsByClassName("container")[0];
+
+    function choose(arr){
+        return arr[Math.floor(Math.random() * arr.length)]
+    }
 
     function fillCell(event){
         let currentOpacity = Number(event.target.style.opacity);
